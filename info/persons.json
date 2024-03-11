@@ -1,8 +1,9 @@
 {
     "689083096": {
         "name": "Егор Рычков",
-        "question": 3,
-        "correct": 6,
-        "wrong": 0
+        "question": 4,
+        "correct": 3,
+        "wrong": 0,
+        "result": 4
     }
 }
