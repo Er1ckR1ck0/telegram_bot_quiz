@@ -10,7 +10,6 @@ router = Router()
 def get_keyboard():
     keyboard = InlineKeyboardBuilder()
     keyboard.add(types.InlineKeyboardButton(text='Запустить викторину', callback_data='start_quiz'))
-    keyboard.add(types.InlineKeyboardButton(text='Статистика участников', callback_data='start_statistic'))
     keyboard.adjust(1)
     return keyboard
 
