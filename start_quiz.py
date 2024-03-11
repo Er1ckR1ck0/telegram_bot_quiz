@@ -19,7 +19,7 @@ def add_person(id: int, name: str) -> None:
         data = {}
     if not str(id) in data:
         data[str(id)] = {"name": name, 'question': 1, 'correct': 0, 'wrong': 0}
-    with open('./info/persons.json', 'w', encoding='utf-8') as file:  # Use mode 'w' to overwrite the file
+    with open('./info/persons.json', 'w', encoding='utf-8') as file:  
         json.dump(data, file, ensure_ascii=False, indent=4)
 
 def change_result(id: int, callback_data: str) -> None:
@@ -32,7 +32,7 @@ def change_result(id: int, callback_data: str) -> None:
         info_about_person[str(id)]['wrong'] += 1
         answer = working_with_file('./info/questions.json')['states'][0]['wrong_answers'][id_quest]
     info_about_person[str(id)]['question'] += 1
-    with open('./info/persons.json', 'w', encoding='utf-8') as file:  # Use mode 'w' to overwrite the file
+    with open('./info/persons.json', 'w', encoding='utf-8') as file:  
         json.dump(info_about_person, file, ensure_ascii=False, indent=4)
     return answer
         
